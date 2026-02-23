@@ -24,7 +24,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-24"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24"
       style={{
         backgroundImage: `url('${heroBackgroundImage}')`,
         backgroundSize: 'cover',
@@ -36,75 +36,75 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full h-full flex items-center">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 h-full items-center">
+      <div className="relative z-10 w-full h-full flex items-center py-8 md:py-0">
+        <div className="container px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 h-full items-center">
           {/* Left Side - Content */}
-          <div className="flex flex-col justify-center space-y-8">
+          <div className="flex flex-col justify-center space-y-4 md:space-y-6 lg:space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 w-fit">
-              <div className="w-2 h-2 bg-secondary rounded-full" />
-              <span className="text-sm font-medium text-white/80 uppercase tracking-wider">
+              <div className="w-2 h-2 bg-red-600 rounded-full" />
+              <span className="text-xs md:text-sm font-medium text-white/80 uppercase tracking-wider">
                 Incorporadora Premium
               </span>
             </div>
 
             {/* Main Title */}
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+            <div className="space-y-2 md:space-y-3 lg:space-y-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
                 Sólida como
                 <br />
-                <span className="text-secondary">estrutura.</span>
+                <span className="text-red-600">estrutura.</span>
                 <br />
                 Exclusiva como
                 <br />
-                <span className="text-secondary">assinatura.</span>
+                <span className="text-red-600">assinatura.</span>
               </h1>
             </div>
 
             {/* Subtitle */}
-            <p className="text-lg text-white/80 max-w-md leading-relaxed font-light">
+            <p className="text-sm md:text-base lg:text-lg text-white/80 max-w-md leading-relaxed font-light">
               Entregamos conceito, propósito e sofisticação em cada empreendimento.
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 pt-4 md:pt-6 lg:pt-8">
               <div>
-                <div className="text-3xl font-bold text-secondary mb-2">15+</div>
-                <p className="text-sm text-white/70">Empreendimentos</p>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-1 md:mb-2">15+</div>
+                <p className="text-xs md:text-sm text-white/70">Empreendimentos</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary mb-2">5k+</div>
-                <p className="text-sm text-white/70">Clientes Satisfeitos</p>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-1 md:mb-2">5k+</div>
+                <p className="text-xs md:text-sm text-white/70">Clientes Satisfeitos</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary mb-2">20+</div>
-                <p className="text-sm text-white/70">Anos de Experiência</p>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-1 md:mb-2">20+</div>
+                <p className="text-xs md:text-sm text-white/70">Anos de Experiência</p>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex gap-4 pt-8">
-              <Button className="bg-secondary hover:bg-secondary/90 text-white px-8 py-6 text-base font-medium">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4 md:pt-6 lg:pt-8">
+              <Button className="bg-red-600 hover:bg-red-700 text-white px-6 md:px-8 py-4 md:py-6 text-sm md:text-base font-medium w-full sm:w-auto">
                 Conheça a PHS
               </Button>
               <Button
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-base font-medium"
+                className="border-white/30 text-white hover:bg-white/10 px-6 md:px-8 py-4 md:py-6 text-sm md:text-base font-medium w-full sm:w-auto"
               >
                 Fale com um Especialista
               </Button>
             </div>
           </div>
 
-          {/* Right Side - Calculator Card */}
-          <div className="h-full flex items-center justify-center">
-            <Card className="w-full max-w-md p-12 bg-white shadow-2xl border-0 rounded-lg">
-              <h3 className="text-2xl font-bold text-primary mb-10">Simule seu Financiamento</h3>
+          {/* Right Side - Calculator Card (Visible on all screens) */}
+          <div className="flex items-center justify-center w-full">
+            <Card className="w-full max-w-md p-6 md:p-8 lg:p-10 bg-white shadow-2xl border-0 rounded-lg">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-6 md:mb-8 lg:mb-10">Simule seu Financiamento</h3>
 
-              <div className="space-y-8">
+              <div className="space-y-5 md:space-y-6 lg:space-y-8">
                 {/* Property Value */}
                 <div>
-                  <label className="text-sm font-semibold text-primary mb-4 block">
+                  <label className="text-xs md:text-sm font-semibold text-gray-900 mb-2 md:mb-3 block">
                     Valor do Imóvel: R$ {propertyValue.toLocaleString('pt-BR')}
                   </label>
                   <Slider
@@ -119,7 +119,7 @@ export default function HeroSection() {
 
                 {/* Down Payment */}
                 <div>
-                  <label className="text-sm font-semibold text-primary mb-4 block">
+                  <label className="text-xs md:text-sm font-semibold text-gray-900 mb-2 md:mb-3 block">
                     Entrada ({downPaymentPercent}%): R$ {downPayment.toLocaleString('pt-BR')}
                   </label>
                   <Slider
@@ -134,7 +134,7 @@ export default function HeroSection() {
 
                 {/* Interest Rate */}
                 <div>
-                  <label className="text-sm font-semibold text-primary mb-4 block">
+                  <label className="text-xs md:text-sm font-semibold text-gray-900 mb-2 md:mb-3 block">
                     Taxa de Juros (a.m.): {interestRate.toFixed(2)}%
                   </label>
                   <Slider
@@ -149,7 +149,7 @@ export default function HeroSection() {
 
                 {/* Loan Term */}
                 <div>
-                  <label className="text-sm font-semibold text-primary mb-4 block">
+                  <label className="text-xs md:text-sm font-semibold text-gray-900 mb-2 md:mb-3 block">
                     Prazo (meses): {loanTerm}
                   </label>
                   <Slider
@@ -163,29 +163,29 @@ export default function HeroSection() {
                 </div>
 
                 {/* Results */}
-                <div className="border-t border-border pt-8 space-y-4">
+                <div className="border-t border-gray-200 pt-5 md:pt-6 lg:pt-8 space-y-3 md:space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Valor Financiado:</span>
-                    <span className="font-semibold text-primary">
+                    <span className="text-xs md:text-sm text-gray-600">Valor Financiado:</span>
+                    <span className="font-semibold text-gray-900 text-xs md:text-sm">
                       R$ {loanAmount.toLocaleString('pt-BR', { maximumFractionDigits: 0 })}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Parcela Mensal:</span>
-                    <span className="text-lg font-bold text-secondary">
+                    <span className="text-xs md:text-sm text-gray-600">Parcela Mensal:</span>
+                    <span className="text-sm md:text-base lg:text-lg font-bold text-red-600">
                       R$ {monthlyPayment.toLocaleString('pt-BR', { maximumFractionDigits: 0 })}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Juros Totais:</span>
-                    <span className="font-semibold text-primary">
+                    <span className="text-xs md:text-sm text-gray-600">Juros Totais:</span>
+                    <span className="font-semibold text-gray-900 text-xs md:text-sm">
                       R$ {totalInterest.toLocaleString('pt-BR', { maximumFractionDigits: 0 })}
                     </span>
                   </div>
                 </div>
 
                 {/* CTA */}
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white py-6 font-semibold">
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-4 md:py-5 lg:py-6 font-semibold text-xs md:text-sm lg:text-base">
                   Solicitar Proposta
                 </Button>
               </div>
@@ -195,8 +195,8 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-white/60" />
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-white/60" />
       </div>
     </section>
   );

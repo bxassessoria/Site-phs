@@ -52,14 +52,14 @@ export default function PropertiesSection() {
         </div>
 
         {/* Properties Grid - 2x2 */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mb-16 md:mb-20">
           {properties.map((property) => (
             <div
               key={property.id}
-              className="group bg-white border border-border hover:border-secondary hover:shadow-lg transition-all duration-300 overflow-hidden"
+              className="group bg-white border border-border hover:border-secondary hover:shadow-lg transition-all duration-300 overflow-hidden rounded-lg"
             >
               {/* Image Placeholder */}
-              <div className={`w-full h-64 ${property.image} relative overflow-hidden`}>
+              <div className={`w-full h-40 md:h-56 lg:h-64 ${property.image} relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div className="absolute top-6 right-6 bg-secondary text-white px-4 py-2 text-xs font-semibold">
                   {property.status}
@@ -67,28 +67,28 @@ export default function PropertiesSection() {
               </div>
 
               {/* Content */}
-              <div className="p-10">
-                <h3 className="text-xl font-semibold text-primary mb-4">{property.name}</h3>
+              <div className="p-4 md:p-6 lg:p-10">
+                <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-primary mb-2 md:mb-4">{property.name}</h3>
 
-                <div className="flex items-center gap-2 text-muted-foreground mb-8">
-                  <MapPin size={16} className="text-secondary" />
-                  <span className="text-sm">{property.location}</span>
+                <div className="flex items-center gap-2 text-muted-foreground mb-4 md:mb-6 lg:mb-8">
+                  <MapPin size={12} className="text-secondary flex-shrink-0" />
+                  <span className="text-xs md:text-sm line-clamp-1">{property.location}</span>
                 </div>
 
-                <div className="flex items-center gap-4 mb-8 pb-8 border-t border-border text-sm">
+                <div className="flex items-center gap-4 mb-4 md:mb-6 lg:mb-8 pb-4 md:pb-6 lg:pb-8 border-t border-border text-xs md:text-sm">
                   <div className="flex items-center gap-2 text-muted-foreground font-medium">
-                    <Maximize2 size={14} className="text-secondary" />
+                    <Maximize2 size={12} className="text-secondary flex-shrink-0" />
                     <span>{property.specs}</span>
                   </div>
                 </div>
 
-                <div className="mb-10">
-                  <p className="text-secondary font-semibold text-lg">{property.price}</p>
+                <div className="mb-4 md:mb-6 lg:mb-10">
+                  <p className="text-secondary font-semibold text-xs md:text-base lg:text-lg line-clamp-1">{property.price}</p>
                 </div>
 
                 <a 
                   href="#contato"
-                  className="w-full block text-center px-6 py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold transition-all duration-300"
+                  className="w-full block text-center px-3 md:px-6 py-2 md:py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold transition-all duration-300 text-xs md:text-sm"
                 >
                   Saiba Mais
                 </a>
